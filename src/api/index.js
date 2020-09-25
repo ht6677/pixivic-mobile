@@ -4,6 +4,8 @@ import * as search from './modules/search';
 import * as user from './modules/user';
 import * as comment from './modules/comment';
 import * as spot from './modules/spot';
+import * as collections from './modules/collections';
+import * as recommend from './modules/recommend';
 
 const api = {
   rank,
@@ -11,7 +13,9 @@ const api = {
   detail,
   user,
   comment,
-  spot
+  spot,
+  collections,
+  recommend
 };
 
 export default api;

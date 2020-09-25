@@ -48,8 +48,8 @@
       <slot />
       <div ref="watercontent" class="water-content" :style="contentStyle">
         <div
-          v-for="(item, index) in displayItems"
-          :key="item.id || index"
+          v-for="item in displayItems"
+          :key="item.id ? item.id : item.key"
           class="cell-container"
           :style="getComputedStyle(item)"
         >
@@ -65,10 +65,10 @@
     <infinite-loading :identifier="identifier" @infinite="infinite">
       <div slot="no-more" />
       <div slot="no-results" style="marginTop: 50px;">
-        <svg font-size="160" class="icon" aria-hidden="true">
+        <svg v-if="showNoResults" font-size="160" class="icon" aria-hidden="true">
           <use xlink:href="#pickongtai1" />
         </svg>
-        <p style="color: #E3F2FA; font-size: 20px;">没有内容</p>
+        <!-- <p style="color: #E3F2FA; font-size: 20px;">没有内容</p> -->
       </div>
     </infinite-loading>
   </div>
@@ -101,6 +101,10 @@ export default {
     identifier: {
       type: Number,
       default: +new Date()
+    },
+    showNoResults: {
+      type: Boolean,
+      default: true
     }
   },
   data() {

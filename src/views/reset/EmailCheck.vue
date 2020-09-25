@@ -44,6 +44,6 @@ export default {
   display flex
   justify-content center
   align-items center
-  background url('../../assets/images/bg.png') no-repeat
+  background url('~@/assets/images/bg.png') no-repeat
   background-size cover
 </style>

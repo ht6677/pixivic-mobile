@@ -91,7 +91,7 @@ export default {
       if (!val) return;
       if (this.tab === 0) {
         this.$router.push({
-          name: 'Illusts',
+          name: 'SearchIllusts',
           query: {
             tag: val
           }
@@ -125,7 +125,7 @@ export default {
               this.$router.push(`/artist/${this.value}`);
             } else if (type === 'illust') {
               this.$store.dispatch('setDetail', null);
-              this.$router.push(`/detail/${this.value}`);
+              this.$router.push(`/illusts/${this.value}`);
             }
           } else {
             Alert({

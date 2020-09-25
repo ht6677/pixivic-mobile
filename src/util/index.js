@@ -84,5 +84,5 @@ export function replaceBigImg(url) {
 }
 
 export function replaceSmallImg(url) {
-  return url.replace('i.pximg.net', 'img.cheerfun.dev:233');
+  return url.replace('i.pximg.net', 'img.cheerfun.dev');
 }

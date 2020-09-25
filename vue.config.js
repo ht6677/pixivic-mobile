@@ -24,7 +24,8 @@ module.exports = {
   // 路径别名
   chainWebpack: config => {
     config.resolve.alias
-      .set('@', resolve('src')); // key,value自行定义，比如.set('@@', resolve('src/components'))
+      .set('@', resolve('src')) // key,value自行定义，比如.set('@@', resolve('src/components'))
+      .set('static', resolve('static'));
   },
 
   css: {

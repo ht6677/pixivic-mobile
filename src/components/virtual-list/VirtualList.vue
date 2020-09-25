@@ -4,6 +4,7 @@
       :cell-size-and-position-getter="cellSizeAndPositionGetter"
       :collection="list"
       :identifier="identifier"
+      :show-no-results="showNoResults"
       @infinite="infinite"
       @resize="waterFall"
     >
@@ -40,6 +41,10 @@ export default {
     identifier: {
       type: Number,
       default: +new Date()
+    },
+    showNoResults: {
+      type: Boolean,
+      default: true
     }
   },
   data() {

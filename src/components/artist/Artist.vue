@@ -135,7 +135,7 @@ export default {
     },
     goDetail(data) {
       this.$store.dispatch('setDetail', data);
-      this.$router.push(`/detail/${data.id}`);
+      this.$router.push(`/illusts/${data.id}`);
     }
   }
 };

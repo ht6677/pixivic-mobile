@@ -84,7 +84,7 @@ export default {
     ...mapGetters(['showTab'])
   },
   mounted() {
-    this.date = this.max = dayjs(new Date()).add(-3, 'days').format('YYYY-MM-DD');
+    this.date = this.max = dayjs(new Date()).subtract(39, 'hour').format('YYYY-MM-DD');
   },
   methods: {
     selectMode(val) {
